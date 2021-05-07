@@ -7,7 +7,9 @@ app.get('/', (req, res) =>{
 })
 
 app.post('/',(req,res)=>{
-    res.send("post请求")
+    console.log("收到请求体：",req.body);
+    res.status(201).send("post请求呀")
+    
 })
 app.put('/',(req,res)=>{
     res.send("put请求")
