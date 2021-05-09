@@ -1,0 +1,588 @@
+<!DOCTYPE html><html><head>
+      <title>note</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\21072\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.5.18\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="express">Express</h1>
+
+<ol>
+<li>&#x6982;&#x5FF5;
+<ol>
+<li>&#x57FA;&#x4E8E;Nodejs&#x5E73;&#x53F0;&#xFF0C;&#x5FEB;&#x901F;&#x5F00;&#x653E;&#x6781;&#x7B80;&#x7684;web&#x5F00;&#x53D1;&#x6846;&#x67B6;&#x3002;</li>
+<li>&#x672C;&#x8D28;&#xFF1A;npm&#x4E0A;&#x7B2C;&#x4E09;&#x65B9;&#x5305;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;&#x5FEB;&#x901F;&#x521B;&#x5EFA;web&#x670D;&#x52A1;&#x5668;&#x7684;&#x8FB9;&#x754C;&#x65B9;&#x6CD5;</li>
+<li>&#x4F5C;&#x7528;&#xFF1A;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x5FEB;&#x901F;&#x521B;&#x5EFA;web&#x670D;&#x52A1;&#x5668;&#x6216;API&#x63A5;&#x53E3;&#x7684;&#x670D;&#x52A1;&#x5668;</li>
+</ol>
+</li>
+<li>&#x57FA;&#x672C;&#x7684;&#x4F7F;&#x7528;
+<ol>
+<li>&#x5B89;&#x88C5;
+<ol>
+<li>&#x63A7;&#x5236;&#x53F0;&#x8FDB;&#x5165;&#x6307;&#x5B9A;&#x76EE;&#x5F55;</li>
+<li>&#x5148;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#x5BF9;&#x8C61; npm init -y</li>
+<li>&#x7136;&#x540E;&#x5B89;&#x88C5;npm i express&#x56E0;&#x4E3A;express&#x9700;&#x8981;js&#x5BF9;&#x8C61;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x7528;&#x5B89;&#x88C5;&#x5168;&#x5C40;&#x7684;&#x5305;</li>
+</ol>
+</li>
+<li>&#x5229;&#x7528;Express&#x521B;&#x5EFA;Web&#x670D;&#x52A1;
+<ol>
+<li>&#x5BFC;&#x5165;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x7684;express&#x5305;
+<ol>
+<li>const express=require(&apos;express&apos;)</li>
+</ol>
+</li>
+<li>&#x521B;&#x5EFA;web&#x5B9E;&#x4F8B;
+<ol>
+<li>const app=express()</li>
+</ol>
+</li>
+<li>&#x5B9A;&#x4E49;&#x5141;&#x8BB8;&#x8BBF;&#x95EE;&#x7684;&#x5730;&#x5740;&#xFF08;&#x8DEF;&#x7531;&#xFF09;
+<ol>
+<li>&#x8BF7;&#x6C42;&#x7684;&#x65B9;&#x5F0F;
+<ol>
+<li>pp.get(&quot;uri&quot;,(req,res)=&gt;{res.send(&quot;hello world&quot;);});</li>
+<li>uri&#x4E00;&#x5F00;&#x59CB;&#x662F;&#x5199;/</li>
+</ol>
+</li>
+<li>&#x5411;&#x5BA2;&#x6237;&#x7AEF;&#x54CD;&#x5E94;&#x6570;&#x636E;
+<ol>
+<li>&#x539F;&#x5148;&#x7684;&#x8F93;&#x51FA;&#xFF1A;res.end()</li>
+<li>&#x73B0;&#x5728;&#x7684;&#x8F93;&#x51FA;&#xFF1A;res.send();</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>&#x542F;&#x52A8;&#x670D;&#x52A1;&#xFF08;&#x76D1;&#x542C;&#x7AEF;&#x53E3;&#xFF09;
+<ol>
+<li>pp.listen(8000,()=&gt;{})</li>
+</ol>
+</li>
+<li>&#x63A7;&#x5236;&#x53F0;&#x89C2;&#x5BDF;&#x7AEF;&#x53E3;&#x662F;&#x5426;&#x542F;&#x52A8;
+<ol>
+<li>windows&#x5E73;&#x53F0;
+<ol>
+<li>netstat -ano | findStr 8080</li>
+</ol>
+</li>
+<li>Unix&#x7CFB;&#x5E73;&#x53F0;&#xFF08;macOS&#x3001;linux&#xFF09;
+<ol>
+<li>netstat -tnpl | grep 8080(&#x60F3;&#x8981;&#x67E5;&#x627E;&#x7684;&#x7AEF;&#x53E3;&#x53F7;)</li>
+</ol>
+</li>
+<li>&#x7B26;&#x53F7;|
+<ol>
+<li>&#x7BA1;&#x9053;&#xFF0C;&#x53D8;&#x91CF;&#x4FEE;&#x9970;&#x7B26;&#xFF0C;&#x8FC7;&#x6EE4;&#x5668;</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>&#x8BBF;&#x95EE;&#x8C03;&#x8BD5; restful&#x89C4;&#x8303;&#xFF08;&#x5BF9;&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;&#x7684;&#x7EA6;&#x675F;&#xFF09;
+<ol>
+<li>GET&#xFF1A;&#x67E5;&#x8BE2;&#x8BF7;&#x6C42;&#x7C7B;&#x578B;
+<ol>
+<li>&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x76F4;&#x63A5;&#x8F93;&#x5730;&#x5740;&#x662F;GET&#x8BF7;&#x6C42;</li>
+<li>&#x53D6;&#x5168;&#x90E8;&#x7684;&#x6570;&#x636E;&#xFF08;&#x5217;&#x8868;&#xFF09;</li>
+<li>&#x53D6;&#x5355;&#x4E2A;&#x7684;&#x6570;&#x636E;&#xFF08;&#x8BE6;&#x60C5;&#xFF09;</li>
+</ol>
+</li>
+<li>POST&#xFF1A;&#x65B0;&#x589E;&#x8BF7;&#x6C42;&#x7C7B;&#x578B;
+<ol>
+<li>&#x65B0;&#x589E;&#x662F;&#x4E0D;&#x5E26;&#x6761;&#x4EF6;&#x7684;</li>
+<li>&#x9700;&#x8981;&#x8BF7;&#x6C42;&#x4F53;&#x7684;</li>
+</ol>
+</li>
+<li>PUT&#xFF1A;&#x4FEE;&#x6539;&#x8BF7;&#x6C42;&#x7C7B;&#x578B;
+<ol>
+<li>&#x4FEE;&#x6539;&#x662F;&#x8981;&#x6761;&#x4EF6;&#x7684;</li>
+<li>&#x4FEE;&#x6539;&#x6761;&#x4EF6;&#x7684;&#x4F20;&#x9012;&#x662F;&#x901A;&#x8FC7;&#x5730;&#x5740;&#x680F;&#x4F20;&#x9012;&#x7684;</li>
+<li>&#x4FEE;&#x6539;&#x6570;&#x636E;&#x7684;&#x4E3B;&#x4F53;&#x662F;&#x901A;&#x8FC7;&#x8BF7;&#x6C42;&#x4F53;&#x4F20;&#x9012;&#x7684;</li>
+</ol>
+</li>
+<li>DELETE&#xFF1A;&#x5220;&#x9664;&#x8BF7;&#x6C42;&#x7C7B;&#x578B;
+<ol>
+<li>&#x5220;&#x9664;&#x9700;&#x8981;&#x6761;&#x4EF6;&#x7684;</li>
+<li>&#x6761;&#x4EF6;&#x901A;&#x8FC7;&#x5730;&#x5740;&#x680F;&#x4F20;&#x9012;</li>
+<li>&#x6CA1;&#x6709;&#x8BF7;&#x6C42;&#x4F53;</li>
+</ol>
+</li>
+<li>all:&#x5339;&#x914D;&#x6240;&#x6709;&#x7684;&#x8BF7;&#x6C42;&#x7C7B;&#x578B;&#xFF08;&#x4E00;&#x822C;&#x4E0D;&#x4F1A;&#x7528;&#x7684;&#xFF09;</li>
+<li>&#x8BBF;&#x95EE;&#x5730;&#x5740;&#x5339;&#x914D;&#x89C4;&#x5219;
+<ol>
+<li>&#x4ECE;&#x4E0A;&#x5F80;&#x4E0B;&#x6267;&#x884C;&#xFF0C;&#x9700;&#x8981;&#x5339;&#x914D;&#x4E0A;&#x201C;&#x8BF7;&#x6C42;&#x7C7B;&#x578B;&#x201D;+&#x8BF7;&#x6C42;&#x8DEF;&#x5F84;&#xFF0C;&#x624D;&#x4F1A;&#x8D70;&#x5BF9;&#x5E94;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>&#x83B7;&#x53D6;query&#x5B57;&#x7B26;&#x4E32;
+<ol>
+<li>get&#x8BF7;&#x6C42;&#xFF0C;&#x83B7;&#x53D6;&#x5730;&#x5740;&#x680F;&#x5E26;?&#x7684;&#xFF0C;&#x8FD9;&#x6837;&#x624D;&#x662F;&#x5BF9;&#x8C61;</li>
+<li>&#x901A;&#x8FC7;req.query&#x83B7;&#x53D6;&#x5BF9;&#x8C61;</li>
+<li>&#x83B7;&#x53D6;&#x7684;&#x7ED3;&#x679C;&#x662F;&#x7AEF;&#x53E3;&#x53F7;&#x540E;&#x9762;&#x90A3;&#x4E00;&#x5806;?user:chenwei&amp;gender:male</li>
+</ol>
+</li>
+<li>&#x52A8;&#x6001;&#x8DEF;&#x7531;&#x53C2;&#x6570;&#x4F20;&#x9012;
+<ol>
+<li>&#x83B7;&#x53D6;&#x5730;&#x5740;&#x680F;&#x540E;&#x9762;&#x76F4;&#x63A5;&#x662F;&#x53C2;&#x6570;&#x7684;</li>
+<li>app.put(&apos;/user/:id&apos;) :id&#x5C31;&#x662F;&#x52A8;&#x6001;&#x53C2;&#x6570;&#xFF0C;&#x56E0;&#x4E3A;&#x4F60;&#x4E0D;&#x77E5;&#x9053;&#x7528;&#x6237;&#x662F;&#x8C01;</li>
+<li>req.params.id&#x83B7;&#x53D6;&#x52A8;&#x6001;&#x53C2;&#x6570; .id&#x662F;&#x5339;&#x914D;:id&#x4F4D;&#x7F6E;&#x7684;&#x53C2;&#x6570;</li>
+</ol>
+</li>
+<li>&#x9759;&#x6001;&#x8D44;&#x6E90;&#x6258;&#x7BA1;&#xFF08;express&#x8BA9;&#x4F60;&#x4E00;&#x884C;&#x642D;&#x5EFA;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x670D;&#x52A1;&#x5668;&#xFF09;
+<ol>
+<li>app.use(&apos;&#x865A;&#x62DF;&#x524D;&#x7F00;&apos;,express.static(&quot;public&quot;)</li>
+<li>public&#x4E3A;&#x4F60;&#x653E;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x7684;&#x6587;&#x4EF6;&#x5939;</li>
+<li>&#x865A;&#x62DF;&#x524D;&#x7F00;&#x53EF;&#x4EE5;&#x5E2E;&#x6211;&#x4EEC;&#x8FF7;&#x60D1;&#x522B;&#x4EBA;&#xFF0C;&#x6216;&#x8005;&#x8BA9;&#x81EA;&#x5DF1;&#x660E;&#x767D;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x7684;&#x529F;&#x80FD;</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>&#x8DEF;&#x7531;
+<ol>
+<li>&#x6982;&#x8FF0;&#xFF1A;&#x6309;&#x952E;&#x4E0E;&#x670D;&#x52A1;&#x7684;&#x6620;&#x5C04;&#x5173;&#x7CFB;
+<ol>
+<li>&#x8DEF;&#x7531;&#x6307;&#x7684;&#x662F;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x7684;&#x8BF7;&#x6C42;&#x548C;&#x670D;&#x52A1;&#x7AEF;&#x5904;&#x7406;&#x65B9;&#x6CD5;&#x5BF9;&#x5E94;&#x7684;&#x5173;&#x7CFB;</li>
+</ol>
+</li>
+<li>&#x5B9A;&#x4E49;&#x8DEF;&#x7531;
+<ol>
+<li>&#x8BF7;&#x6C42;&#x7684;&#x65B9;&#x6CD5;</li>
+<li>&#x8BF7;&#x6C42;&#x7684;&#x5730;&#x5740;&#xFF08;uri&#xFF09;</li>
+<li>&#x5BF9;&#x5E94;&#x7684;&#x5904;&#x7406;&#x51FD;&#x6570;&#xFF08;&#x54CD;&#x5E94;&#xFF09;</li>
+</ol>
+</li>
+<li>&#x8DEF;&#x7531;&#x6A21;&#x5757;&#x5316;
+<ol>
+<li>&#x5C06;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x7531;&#x89C4;&#x5219;&#x62C6;&#x5206;&#x5230;&#x82E5;&#x5E72;&#x4E2A;&#x8DEF;&#x7531;&#x6587;&#x4EF6;&#xFF08;js&#x6587;&#x4EF6;&#xFF09;</li>
+<li>&#x6838;&#x5FC3;&#x601D;&#x60F3;&#xFF1A;&#x80FD;&#x62C6;&#x5C31;&#x62C6;&#xFF08;&#x62C6;&#x5230;&#x4E0D;&#x80FD;&#x62C6;&#x4E3A;&#x6B62;&#xFF0C;&#x89E3;&#x8026;&#xFF0C;&#x9AD8;&#x5185;&#x805A;&#xFF0C;&#x4F4E;&#x8026;&#x5408;&#xFF09;</li>
+<li>&#x6B65;&#x9AA4;
+<ol>
+<li>&#x521B;&#x5EFA;&#x72EC;&#x7ACB;js&#x7A7A;&#x767D;&#x6587;&#x4EF6;&#xFF08;&#x8DEF;&#x7531;&#x6A21;&#x5757;&#x5316;&#x6587;&#x4EF6;&#xFF09;&#xFF08;&#x653E;&#x5230;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#x4E0A;&#xFF09;</li>
+<li>&#x5728;js&#x6587;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;express.Router()&#x65B9;&#x6CD5;&#x521B;&#x5EFA;&#x8DEF;&#x7531;&#x6A21;&#x5757;&#x5BF9;&#x8C61;</li>
+<li>&#x4F7F;&#x7528;&#x8DEF;&#x7531;&#x5BF9;&#x8C61;&#x5B8C;&#x6210;&#x8DEF;&#x7531;&#x89C4;&#x5219;&#x5BF9;&#x5E94;&#x7684;&#x4E1A;&#x52A1;&#x7F16;&#x5199;</li>
+<li>&#x4F7F;&#x7528;&#x6A21;&#x5757;&#x5316;&#x5BFC;&#x51FA;&#xFF08;module.exports=router&#xFF09;</li>
+<li>&#x5728;&#x4E3B;&#x5165;&#x53E3;&#x6587;&#x4EF6;&#x4E2D;&#x80FD;&#x591F;&#x4F7F;&#x7528;app.use&#x65B9;&#x6CD5;&#x6765;&#x6CE8;&#x518C;&#x5B9A;&#x4E49;&#x7684;&#x8DEF;&#x7531;&#x6A21;&#x5757;</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>&#x4E2D;&#x95F4;&#x4EF6;
+<ol>
+<li>&#x6982;&#x5FF5;&#xFF1A;&#x4E1A;&#x52A1;&#x7684;&#x4E2D;&#x95F4;&#x73AF;&#x8282;
+<ol>
+<li>express&#x4E2D;&#xFF0C;&#x5F53;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#x5230;&#x8FBE;&#x670D;&#x52A1;&#x5668;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x7ED9;&#x5BA2;&#x6237;&#x54CD;&#x5E94;&#x4E4B;&#x524D;&#x8FDE;&#x7EED;&#x8C03;&#x7528;&#x591A;&#x4E2A;&#x4E2D;&#x95F4;1. &#x4EF6;&#xFF0C;&#x6765;&#x5BF9;&#x672C;&#x6B21;&#x8BF7;&#x6C42;&#x548C;&#x8FD4;&#x56DE;&#x54CD;&#x5E94;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5904;&#x7406;</li>
+</ol>
+</li>
+<li>&#x4E2D;&#x95F4;&#x4EF6;&#x7684;&#x672C;&#x8D28;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;</li>
+<li>&#x4E2D;&#x95F4;&#x4EF6;&#x7684;&#x5206;&#x7C7B;
+<ol>
+<li>
+<p>&#x4F9D;&#x636E;&#x53D1;&#x5E03;&#x5546;&#x5206;&#x7C7B;</p>
+</li>
+<li>
+<p>&#x5185;&#x7F6E;&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;express&#x672C;&#x8EAB;&#x81EA;&#x5E26;&#x7684;</p>
+<ol>
+<li>express.json
+<ol>
+<li>&#x4F5C;&#x7528;&#xFF1A;&#x63A5;&#x6536;JSON&#x683C;&#x5F0F;&#x63D0;&#x4EA4;&#x7684;&#x6570;&#x636E;,&#x7ED1;&#x5B9A;&#x5230;req.body</li>
+<li>&#x517C;&#x5BB9;&#x6027;&#x95EE;&#x9898;&#xFF1A;express&gt;=4.16.0</li>
+<li>app.use(express.json())</li>
+<li>&#x63A5;&#x6536;&#x5B8C;&#x6570;&#x636E;&#x540E;&#xFF0C;&#x4F1A;&#x5C06;&#x6570;&#x636E;&#x7684;&#x5BF9;&#x8C61;&#x5F62;&#x5F0F;&#x6302;&#x8F7D;&#x5230;req&#x8BF7;&#x6C42;&#x5BF9;&#x8C61;&#x7684;body&#x5C5E;&#x6027;&#x4E0A;</li>
+</ol>
+</li>
+<li>express.urlencoded
+<ol>
+<li>&#x4F5C;&#x7528;&#xFF1A;&#x5904;&#x7406;post&#x8868;&#x5355;&#x6570;&#x636E;</li>
+<li>&#x517C;&#x5BB9;&#x6027;&#x95EE;&#x9898;&#xFF1A;express&gt;=4.16.0</li>
+<li>app.use(express.urlencoded({extended:false}))
+<ol>
+<li>post&#x8868;&#x5355;&#x6570;&#x636E;&#x4E00;&#x822C;&#x4E0D;&#x5E26;&#x65B9;&#x6CD5;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x7528;extended:false</li>
+<li>extended:false,&#x8868;&#x793A;&#x8981;&#x6C42;&#x5728;&#x89E3;&#x6790;&#x6570;&#x636E;&#x7684;&#x65F6;&#x5019;&#x4F7F;&#x7528;query string&#x5E93;,&#x4F1A;&#x5254;&#x9664;&#x4F20;&#x9012;&#x8FC7;&#x6765;&#x7684;&#x65B9;&#x6CD5;&#x548C;&#x5BF9;&#x8C61;</li>
+<li>extended:true,&#x8868;&#x793A;&#x8981;&#x6C42;&#x5728;&#x89E3;&#x6790;&#x6570;&#x636E;&#x7684;&#x65F6;&#x5019;&#x4F7F;&#x7528;qs&#x5E93;,&#x4E0D;&#x4F1A;&#x5254;&#x9664;&#x4F20;&#x9012;&#x8FC7;&#x6765;&#x7684;&#x65B9;&#x6CD5;&#x548C;&#x5BF9;&#x8C61;&#xFF08;&#x9ED8;&#x8BA4;&#xFF09;</li>
+</ol>
+</li>
+<li>&#x5176;&#x5728;&#x63A5;&#x6536;&#x5B8C;&#x6570;&#x636E;&#x540E;&#xFF0C;&#x4F1A;&#x5C06;&#x6570;&#x636E;&#x7684;&#x5BF9;&#x8C61;&#x5F62;&#x5F0F;&#x6302;&#x8F7D;&#x5230;req&#x8BF7;&#x6C42;&#x5BF9;&#x8C61;&#x7684;body&#x5C5E;&#x6027;&#x4E0A;</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>&#x7B2C;&#x4E09;&#x65B9;&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;&#x7B2C;&#x4E09;&#x65B9;&#x5F00;&#x53D1;&#x7684;</p>
+<ol>
+<li>body-parser&#x63A5;&#x6536;post&#x6570;&#x636E;</li>
+<li>&#x6B65;&#x9AA4;
+<ol>
+<li>&#x5B89;&#x88C5;&#x7B2C;&#x4E09;&#x65B9;&#x4E2D;&#x95F4;&#x4EF6;body-parser npm i -S body-</li>
+<li>&#x5E94;&#x7528;&#x6587;&#x4EF6;&#x4E2D;&#x5BFC;&#x5165;body-parser</li>
+<li>&#x901A;&#x8FC7;&#x4E2D;&#x95F4;&#x4EF6;&#x8C03;&#x7528;app.use(body.urlencoded({extended:false}))</li>
+<li>&#x5728;&#x5339;&#x914D;&#x7684;&#x8DEF;&#x7531;&#x4E2D;&#x901A;&#x8FC7;req.body&#x83B7;&#x53D6;post&#x6570;&#x636E;</li>
+</ol>
+</li>
+<li>express&#x5185;&#x7F6E;&#x7684;express.urlencoded&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;&#x57FA;&#x4E8E;body-parser&#x8FD9;&#x4E2A;&#x7B2C;&#x4E09;&#x65B9;&#x4E2D;&#x95F4;&#x4EF6;&#x8FDB;&#x4E00;&#x6B65;&#x5C01;&#x88C5;&#x51FA;&#x6765;&#x7684;&#x3002;</li>
+<li>&#x4E00;&#x822C;&#x4EE5;&#x524D;&#x7684;express&#x7248;&#x672C;&#x4F7F;&#x7528;&#x7B2C;&#x4E09;&#x65B9;&#x4E2D;&#x95F4;&#x4EF6;</li>
+</ol>
+</li>
+<li>
+<p>&#x81EA;&#x5B9A;&#x4E49;&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x81EA;&#x5DF1;&#x7F16;&#x5199;&#x7684;</p>
+<ol>
+<li>&#x672C;&#x8D28;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#x7684;&#x51FD;&#x6570;
+<ol>
+<li>&#x53C2;&#x6570;&#x5FC5;&#x987B;&#x6709;req,res,next</li>
+<li>next&#x53C2;&#x6570;&#x8BA9;&#x4E2D;&#x95F4;&#x4EF6;&#x80FD;&#x591F;&#x8BA9;&#x6D41;&#x7A0B;&#x5411;&#x4E0B;&#x6267;&#x884C;&#x4E0B;&#x53BB;&#xFF0C;&#x76F4;&#x5230;&#x5339;&#x914D;&#x8DEF;&#x7531;&#xFF0C;&#x53D1;&#x9001;&#x54CD;&#x5E94;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;
+<ol>
+<li>&#x5339;&#x914D;&#x8DEF;&#x7531;&#x5C31;&#x662F;app.post,delete,put,get</li>
+<li>next&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x7EE7;&#x7EED;&#x4F20;&#x9012;&#x4E0B;&#x53BB;</li>
+</ol>
+</li>
+<li>&#x4E5F;&#x53EF;&#x4EE5;&#x7ED9;request&#x5BF9;&#x8C61;&#x6DFB;&#x52A0;&#x5C5E;&#x6027;&#x6765;&#x8FDB;&#x884C;&#x4E2D;&#x95F4;&#x4EF6;&#x7684;&#x6570;&#x636E;&#x5411;&#x4E0B;&#x4F20;&#x9012;</li>
+<li>&#x6574;&#x4E2A;&#x8BF7;&#x6C42;&#x94FE;&#x8DEF;&#x4E2D;&#xFF0C;&#x6240;&#x6709;&#x4E2D;&#x95F4;&#x4EF6;&#x4E0E;&#x6700;&#x7EC8;&#x8DEF;&#x7531;&#x5171;&#x7528;&#x4E00;&#x4EFD;req&#x548C;res</li>
+</ol>
+</li>
+<li>req.on()&#x76D1;&#x542C;data&#x548C;end&#x4E8B;&#x4EF6;
+<ol>
+<li>data&#x4E8B;&#x4EF6;&#x5C06;buffer&#x5165;&#x6808;</li>
+<li>end&#x4E8B;&#x4EF6; &#x8C03;&#x7528;Buffer&#x4E2D;&#x7684;&#x8FDE;&#x63A5;&#x65B9;&#x6CD5;&#xFF0C;&#x5C06;&#x5B57;&#x8282;&#x6570;&#x7EC4;&#x8FDE;&#x63A5;&#x8D77;&#x6765; Buffer.concat(arr)</li>
+<li>req.on&#x672C;&#x8D28;&#x662F;&#x4E00;&#x4E2A;&#x5F02;&#x6B65;&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#xFF0C;&#x5E94;&#x8BE5;&#x5C06;next&#x653E;&#x5230;&#x76D1;&#x542C;end&#x4E8B;&#x4EF6;&#x4E2D;&#xFF0C;&#x4E0D;&#x7136;&#x6570;&#x636E;&#x6CA1;&#x6709;&#x6302;&#x5230;req.body&#x5C31;&#x4E0B;&#x4E00;&#x6B65;&#x4E86;</li>
+<li>&#x610F;&#x601D;&#x662F;req.on&#x548C;&#x5728;&#x540C;&#x4E00;&#x5C42;&#x7684;&#x5176;&#x4ED6;&#x65B9;&#x6CD5;&#x662F;&#x540C;&#x65F6;&#x6267;&#x884C;&#x7684;</li>
+</ol>
+</li>
+<li>&#x5F15;&#x5165;query string&#x5E93;&#x89E3;&#x6790;&#x5BF9;&#x8C61; let post=querystring.parse(buffer.toString());</li>
+<li>&#x5C06;&#x89E3;&#x6790;&#x540E;&#x7684;&#x5BF9;&#x8C61;&#x7ED1;&#x5B9A;&#x5230;req.body&#x4E0A;&#xFF0C;req.body=post;</li>
+<li>&#x4E2D;&#x95F4;&#x4EF6;&#x5C01;&#x88C5;&#x6210;&#x6A21;&#x5757;&#x5C31;&#x662F;JSON&#x5BF9;&#x8C61;&#x5F62;&#x5F0F;&#xFF0C;&#x65B9;&#x4FBF;&#x5176;&#x4ED6;js&#x6587;&#x4EF6;&#x8C03;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x4E2D;&#x95F4;&#x4EF6;
+<ol>
+<li>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5BFC;&#x51FA;&#x6A21;&#x5757;&#x7528;&#x7684;js&#x6587;&#x4EF6;</li>
+<li>&#x5C06;&#x81EA;&#x5B9A;&#x4E49;&#x4E2D;&#x95F4;&#x4EF6;&#x5BFC;&#x51FA;</li>
+<li>module.exports=csBodyParse;</li>
+<li>&#x7136;&#x540E;&#x5176;&#x4ED6;js&#x6587;&#x4EF6;app.use(&apos;./&#x8DEF;&#x5F84;&apos;)</li>
+<li>./&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x7684;</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>&#x9519;&#x8BEF;&#x7C7B;&#x578B;&#x4E2D;&#x95F4;&#x4EF6;(&#x5199;&#x5230;&#x8DEF;&#x7531;&#x540E;&#x9762;)</p>
+<ol>
+<li>&#x5F02;&#x5E38;&#x4E2D;&#x95F4;&#x4EF6;
+<ol>
+<li>&#x4F5C;&#x7528;&#xFF1A;&#x4E13;&#x95E8;&#x7528;&#x6765;&#x6355;&#x83B7;&#x6574;&#x4E2A;&#x9879;&#x76EE;&#x53D1;&#x751F;&#x7684;&#x5F02;&#x5E38;&#x9519;&#x8BEF;&#xFF0C;&#x4ECE;&#x800C;&#x9632;&#x6B62;&#x9879;&#x76EE;&#x5F02;&#x5E38;&#x5D29;&#x6E83;&#x7684;&#x95EE;&#x9898;&#x4EA7;&#x751F;</li>
+<li>&#x5728;&#x8DEF;&#x7531;&#x4E2D;try catch&#x4E2D;throw new Error(&quot;&quot;);&#x5C06;&#x9519;&#x8BEF;&#x6539;&#x6210;&#x65B0;&#x7684;&#x81EA;&#x5DF1;&#x5B9A;&#x4E49;&#x7684;err</li>
+<li>&#x7136;&#x540E;&#x7528;&#x5F02;&#x5E38;&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;&#x5C06;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x8FD4;&#x56DE;&#x56DE;&#x53BB;</li>
+<li>&#x683C;&#x5F0F;&#xFF1A;&#x9519;&#x8BEF;&#x7EA7;&#x522B;&#x4E2D;&#x95F4;&#x4EF6;&#x7684;&#x51FD;&#x6570;&#x53C2;&#x6570;&#x4E2D;&#xFF0C;&#x5FC5;&#x987B;&#x6709;&#x56DB;&#x4E2A;&#x5F62;&#x53C2;&#xFF0C;&#x5206;&#x522B;&#x662F;(err,req,res,next)
+<ol>
+<li>err&#x53C2;&#x6570;&#x7684;&#x4F5C;&#x7528;&#xFF1A;&#x5305;&#x542B;&#x9519;&#x8BEF;&#x7684;&#x4FE1;&#x606F;err.message</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>404&#x4E2D;&#x95F4;&#x4EF6;(&#x4E0E;&#x5F02;&#x5E38;&#x4E2D;&#x95F4;&#x4EF6;&#x7684;&#x987A;&#x5E8F;&#x65E0;&#x6240;&#x8C13;&#xFF0C;&#x53EA;&#x8981;&#x8DEF;&#x7531;&#x540E;&#x9762;)
+<ol>
+<li>&#x6240;&#x6709;&#x8DEF;&#x7531;&#x90FD;&#x5339;&#x914D;&#x4E0D;&#x4E0A;&#xFF0C;&#x5C31;&#x8D70;&#x8FD9;&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;&#x5176;&#x5B9E;&#x5C31;&#x7C7B;&#x4F3C;&#x4E00;&#x4E2A;&#x4EC0;&#x4E48;&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;&#x90FD;&#x80FD;&#x8FDB;&#x7684;&#x8DEF;&#x7531;</li>
+<li>&#x4F5C;&#x7528;&#xFF1A;&#x5B9A;&#x4E49;404&#x7684;&#x9875;&#x9762;&#x9700;&#x8981;&#x8F93;&#x51FA;&#x7684;&#x6548;&#x679C;</li>
+<li>&#x53C2;&#x6570;req,res,next  res.status(404).send(&quot;404&quot;);&#x8FD4;&#x56DE;&#x72B6;&#x6001;&#x7801;</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>&#x5C40;&#x90E8;&#x4E2D;&#x95F4;&#x4EF6;</p>
+<ol>
+<li>&#x5728;&#x8DEF;&#x7531;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x90A3;&#x91CC;&#x5199;&#x4E0A;[express.urlencoded({extended:false}),express.json()]</li>
+</ol>
+</li>
+<li>
+<p>&#x4F9D;&#x636E;&#x4F7F;&#x7528;&#x5C42;&#x9762;&#x5206;&#x7C7B;</p>
+</li>
+<li>
+<p>&#x5E94;&#x7528;&#x7EA7;&#x522B;&#x4E2D;&#x95F4;&#x4EF6;</p>
+</li>
+<li>
+<p>pp.use &#x5168;&#x5C40;&#x4F7F;&#x7528;&#x4E2D;&#x95F4;&#x4EF6; &#x6240;&#x6709;&#x8DEF;&#x7531;&#x90FD;&#x751F;&#x6548;</p>
+</li>
+<li>
+<p>pp.&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;(&apos;&#x5730;&#x5740;&apos;,[&#x4E2D;&#x95F4;&#x4EF6;],&#x56DE;&#x8C03;&#x51FD;&#x6570;) &#x5F53;&#x524D;&#x8DEF;&#x7531;&#x751F;&#x6548;</p>
+</li>
+<li>
+<p>&#x8DEF;&#x7531;&#x7EA7;&#x522B;&#x4E2D;&#x95F4;&#x4EF6;</p>
+</li>
+<li>
+<p>outer.use</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>cookie&#x548C;session&#xFF08;&#x4F1A;&#x8BDD;&#x63A7;&#x5236;&#xFF09;</li>
+</ol>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
